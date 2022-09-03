@@ -1,40 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <title>Complier</title>
+        <link rel="stylesheet" href="style.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>My Code Editor</title>
-</head>
-
-<body>
-    <div class="editor">
-        <div class="editor__wrapper">
-            <div class="editor__body">
-                <div id="editorCode" class="editor__code"></div>
-            </div>
-            <div class="editor__footer">
-                <div class="editor__footer--left">
-                    <button class="editor__btn editor__run">Run ></button>
-                    <button class="editor__btn editor__reset">Reset ></button>
-                </div>
-                <div class="editor__footer--right">
-                    <div class="editor__console">
-                        <ul class="editor__console-logs"></ul>
+    </head>
+    <body>
+        <div class="container">
+            <div class="input" input>
+                <div class="input-bar">
+                    <div class="file">
+                        <div class="file-name">Main</div>
+                        <div class="newtab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg></div>
+                        <div class="options">
+                            <select id="language">
+                                <option>Bash</option>
+                                <option>C#</option>
+                                <option selected>C++</option>
+                                <option>C</option>
+                                <option>Java</option>
+                                <option>Python</option>
+                            </select>
+                        </div>
                     </div>
+                    
+                    <div class="features">
+                        <img class=" lightImg imgsize light" src="moon.png">
+                        <button class="run-btn">Run</button>
+                    </div>
+                    
                 </div>
+                <textarea name="input-text" id="input-text"></textarea>
+            </div>
+            
+            <div class="output">
+                 <div class="output-bar">
+                    <button class="clear-btn">Clear</button>
+                 </div>
+                 <ul class="editor__console-logs"></ul>
             </div>
         </div>
-    </div>
-    <!-- Required Ace Libraries -->
-    <script src="ace.js"></script>
-    <script src="mode-javascript.js"></script>
-    <script src="lib/js/ace-editor/src-min/ext-language_tools.js"></script>
-
-    <!-- Custom Scripts -->
-    <script src="editor.js"></script>
-    <script src="editor console.js"></script>
-</body>
-
-</html>
+        <script src="script.js"></script>
+        <!-- Required Ace Libraries -->
+        <script src="ace.js"></script>
+        <script src="mode-javascript.js"></script>
+        <script src="lib/js/ace-editor/src-min/ext-language_tools.js"></script>
+       
+        <!-- Custom Scripts -->
+        <script src="editor.js"></script>
+        <script src="editor console.js"></script>
+    </body>
+    </html>

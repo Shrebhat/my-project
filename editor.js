@@ -1,10 +1,18 @@
 // Retrieve Elements
 const consoleLogList = document.querySelector('.editor__console-logs');
-const executeCodeBtn = document.querySelector('.editor__run');
-const resetCodeBtn = document.querySelector('.editor__reset');
+const executeCodeBtn = document.querySelector('.run-btn');
+const resetCodeBtn = document.querySelector('.clear-btn');
+
+
+
+// executeCodeBtn.addEventListener("click",()=>{
+//     console.log("hello")
+//     inputCode.innerText="hello bsdjbjkhlkhk"
+// })
+
 
 // Setup Ace
-let codeEditor = ace.edit("editorCode");
+let codeEditor = document.getElementById("input-text");
 let defaultCode = 'console.log("Hello World!")';
 let consoleMessages = [];
 
@@ -58,7 +66,7 @@ executeCodeBtn.addEventListener('click', () => {
     editorLib.clearConsoleScreen();
     
     // Get input from the code editor
-    const userCode = codeEditor.getValue();
+    const userCode = codeEditor.Value;
 
     // Run the user code
     try {
